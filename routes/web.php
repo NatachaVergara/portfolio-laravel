@@ -20,8 +20,10 @@ Route::get('/', function () {
 
 Route::get('/inicio', [InicioController::class, 'index']);
 
-Route::resource('articulos','App\Http\Controllers\ArticuloController');
+Route::resource('articulos', 'App\Http\Controllers\ArticuloController');
 Route::resource('proyectos', 'App\Http\Controllers\ProyectoController');
+Route::resource('skills', 'App\Http\Controllers\SkillController');
+Route::resource('precios', 'App\Http\Controllers\PrecioController');
 
 Route::middleware([
     'auth:sanctum',
@@ -32,5 +34,3 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-
-

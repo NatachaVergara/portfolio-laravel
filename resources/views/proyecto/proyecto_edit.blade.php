@@ -30,7 +30,8 @@
         <div class="mb-3">
             <label for="formFile" class="form-label">Imagen</label>
             <input class="form-control pb-3" name='imagen' type="file" id="formFile">
-            <img src="{{ asset('upload/proyectos/' . $proyecto->image) }}" width="70px" height="70px" alt="Image" class='m-2'>
+            <img src="{{ asset('upload/proyectos/' . $proyecto->image) }}" width="70px" height="70px" alt="Image"
+                class='m-2'>
         </div>
 
         <div class=''>
@@ -38,14 +39,18 @@
             <a href="/proyectos" class="btn btn-danger">Cancelar</a>
         </div>
     </form>
+
+
+    @include('sweetalert::alert')
 @stop
+
+
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 
+
 @section('js')
-    <script>
-        console.log('Hi!');
-    </script>
+   
 @stop

@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Proyecto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use RealRashid\SweetAlert\Facades\Alert;
+
+
 
 class ProyectoController extends Controller
 {
@@ -55,6 +58,7 @@ class ProyectoController extends Controller
             $proyecto->image = $filename;
         }
         $proyecto->save();
+        Alert::success('Nuevo proyecto guardado exitosamente');
         return redirect('/proyectos');
     }
 
@@ -89,6 +93,8 @@ class ProyectoController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        
         $proyecto = Proyecto::find($id);
         $proyecto->titulo = $request->get('titulo');
         $proyecto->link = $request->get('link');
@@ -107,6 +113,7 @@ class ProyectoController extends Controller
             $proyecto->image = $filename;
         }
         $proyecto->update();
+        toast('Actualizado', 'success');
         return redirect('/proyectos');
     }
 
@@ -118,6 +125,8 @@ class ProyectoController extends Controller
      */
     public function destroy($id)
     {
+
+
         $proyecto = Proyecto::find($id);
         $destination = 'upload/proyectos' . $proyecto->image;
         if (File::exists($destination)) {

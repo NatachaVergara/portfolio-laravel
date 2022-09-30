@@ -27,8 +27,14 @@
             <input type="text" class="form-control" name='tec' required>
         </div>
         <div class="mb-3">
-            <label for="formFile" class="form-label">Imagen</label>
-            <input class="form-control pb-3" name='imagen' type="file" required id="formFile">
+            <x-adminlte-input-file name="imagen" igroup-size="sm" placeholder="Elije una imagen...">
+                <x-slot name="imagen">
+                    <div class="input-group-text bg-lightblue">
+                        <i class="fas fa-upload"></i>
+                    </div>
+                </x-slot>
+            </x-adminlte-input-file>
+           
         </div>
 
         <div class=''>
@@ -36,6 +42,9 @@
             <a href="/proyectos" class="btn btn-danger">Cancelar</a>
         </div>
     </form>
+
+
+    @include('sweetalert::alert')
 @stop
 
 @section('css')

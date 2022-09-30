@@ -13,13 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('proyectos', function (Blueprint $table) {
+        Schema::create('precios', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo', 50);
-            $table->string('link', 250);
-            $table->string('logo', 5);
-            $table->string('tec', 50);
-            $table->string('image', 50);
+            $table->string('titulo', 20);
+            $table->float('precio', 8, 2);
+            $table->tinyInteger('dominio');
+            $table->tinyInteger('hosting');
+            $table->string('almacenamiento', 50);
+            $table->string('libre', 50);
+            $table->integer('telefono');
             $table->timestamps();
         });
     }
@@ -31,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('proyectos');
+        Schema::dropIfExists('precios');
     }
 };

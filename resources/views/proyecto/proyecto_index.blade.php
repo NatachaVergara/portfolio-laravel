@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <a href='proyectos/create' class='btn btn-primary my-3'>CREAR</a>
+    <a href='/proyectos/create' class='btn btn-primary my-3'>CREAR</a>
 
 
     <div class='d-flex flex-wrap justify-content-center'>
@@ -21,12 +21,12 @@
                     <p class="text-center">{{ $proyecto->logo }} </p>
                     <p class="text-center">{{ $proyecto->tec }} </p>
 
-                    <form
-                    method="POST" action="{{ route('proyectos.destroy', $proyecto->id) }}"
+                    <form method="POST" action="{{ route('proyectos.destroy', $proyecto->id) }}"
                         class='d-flex justify-content-around align-items-center'>
                         @csrf @method('DELETE')
                         <a href="/proyectos/{{ $proyecto->id }}/edit" class="btn btn-primary">Editar</a>
-                        <button type='submit' class="btn btn-danger">Eliminar</button>
+                        <x-adminlte-button class="btn-md btnBorrar" type="submit" label="" theme="outline-danger"
+                            icon="fas fa-xs fa-trash" />
                     </form>
                 </div>
             </div>
@@ -35,12 +35,15 @@
 
     </div>
 
+
+    @include('sweetalert::alert')
+
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
+
 @stop
 
 @section('js')
-    <script></script>
+
 @stop

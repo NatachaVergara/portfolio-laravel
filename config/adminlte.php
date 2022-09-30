@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Administrar Portfolio</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -107,7 +107,7 @@ return [
     */
 
     'preloader' => [
-        'enabled' => true,
+        'enabled' => false,
         'img' => [
             'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
             'alt' => 'AdminLTE Preloader Image',
@@ -306,19 +306,27 @@ return [
         //     'type' => 'sidebar-menu-search',
         //     'text' => 'search',
         // ],
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
+        // [
+        //     'text' => 'blog',
+        //     'url'  => 'admin/blog',
+        //     'can'  => 'manage-blog',
+        // ],
         [
             'text'        => 'Proyectos',
             'url'         => 'proyectos',
             'icon'        => 'fas fa-briefcase',
-            // 'label'       => '',
-            // 'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        [
+            'text'        => 'Skills',
+            'url'         => 'skills',
+            'icon'        => 'fas fa-tools',
+        ],
+        [
+            'text'        => 'Precios',
+            'url'         => 'precios',
+            'icon'        => 'fas fa-dollar-sign',
+        ],
+        ['header' => 'Configuracion de cuenta'],
         [
             'text' => 'Perfil de usuario',
             'url'  => 'user/profile',

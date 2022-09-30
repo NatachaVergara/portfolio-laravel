@@ -1,19 +1,19 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Precios')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Precios del sitio</h1>
 @stop
 
-
+@section('content')
+    <p>CREAR</p>
+@stop
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 
 @section('js')
-
-    <script></script>
 
 @stop
