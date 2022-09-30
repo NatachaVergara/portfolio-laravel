@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Precio;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PrecioController extends Controller
 {
@@ -31,6 +32,7 @@ class PrecioController extends Controller
      */
     public function create()
     {
+
         return view('precio.precio_create');
     }
 
@@ -42,7 +44,18 @@ class PrecioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $precio = new Precio;
+        $precio->titulo = $request->get('titulo');
+        $precio->precio = $request->get('precio');
+        $precio->dominio = $request->get('dominio');
+        $precio->hosting = $request->get('hosting');
+        $precio->almacenamiento = $request->get('almacenamiento');
+        $precio->libre = $request->get('libre');
+        $precio->telefono = $request->get('telefono');
+
+        $precio->save();
+        Alert::success('Nuevo precio guardado exitosamente');
+        return redirect('/precios');
     }
 
     /**

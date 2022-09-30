@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <p>CREAR</p>
+    <x-forms.precios />
 @stop
 
 @section('css')
