@@ -18,13 +18,9 @@ class Card extends Component
      *
      * @var string
      */
-    public $titulo;
-    public $precio;
+    public $precios;
 
-    public $dominio;
-    public $hosting;
-    public $almacenamiento;
-    public $telefono;
+
 
 
     /**
@@ -34,15 +30,11 @@ class Card extends Component
      * @param  string  $message
      * @return void
      */
-    public function __construct($titulo, $precio, $dominio, $hosting, $almacenamiento, $telefono)
+    public function __construct($precios, )
     {
 
-        $this->titulo = $titulo;
-        $this->precio = $precio;
-        $this->dominio = $dominio;
-        $this->hosting = $hosting;
-        $this->almacenamiento = $almacenamiento;
-        $this->telefono = $telefono;
+        $this->precios = $precios;
+
     }
 
     /**

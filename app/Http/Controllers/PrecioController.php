@@ -77,7 +77,8 @@ class PrecioController extends Controller
      */
     public function edit($id)
     {
-        return view('precio.precio_edit');
+        $precio = Precio::find($id);
+        return view('precio.precio_edit')->with('precio', $precio);
     }
 
     /**
@@ -89,7 +90,19 @@ class PrecioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $precio = Precio::find($id);
+        $precio->titulo = $request->get('titulo');
+        $precio->precio = $request->get('precio');
+        $precio->dominio = $request->get('dominio');
+        $precio->hosting = $request->get('hosting');
+        $precio->almacenamiento = $request->get('almacenamiento');
+        $precio->libre = $request->get('libre');
+        $precio->telefono = $request->get('telefono');
+
+        $precio->update();
+        toast('Actualizado', 'success');
+        return redirect('/precios');
     }
 
     /**
@@ -100,6 +113,9 @@ class PrecioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $precio = Precio::find($id);
+        $precio->delete();
+        toast('Proyecto eliminado', 'success');
+        return redirect('/precios');
     }
 }

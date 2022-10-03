@@ -8,6 +8,9 @@
 
 @section('content')
     <x-forms.precios />
+
+    @include('sweetalert::alert')
+
 @stop
 
 @section('css')

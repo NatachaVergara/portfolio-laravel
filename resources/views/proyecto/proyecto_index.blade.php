@@ -22,7 +22,7 @@
                     <p class="text-center">{{ $proyecto->tec }} </p>
 
                     <form method="POST" action="{{ route('proyectos.destroy', $proyecto->id) }}"
-                        class='d-flex justify-content-around align-items-center'>
+                        class='d-flex justify-content-around align-items-center enviarFormulario'>
                         @csrf @method('DELETE')
                         <a href="/proyectos/{{ $proyecto->id }}/edit" class="btn btn-primary">Editar</a>
                         <x-adminlte-button class="btn-md btnBorrar" type="submit" label="" theme="outline-danger"
@@ -45,5 +45,29 @@
 @stop
 
 @section('js')
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    //No funciona la funcion flecha!
+    $('.enviarFormulario').submit(function(e) {
+        e.preventDefault();
+
+        Swal.fire({
+            title: '¿Está seguro?',
+            text: "!Se eliminara de manera definitiva!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, eliminar!',
+            cancelButtonText: 'No, cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                this.submit()
+            }
+        })
+    })
+</script>
+
 
 @stop

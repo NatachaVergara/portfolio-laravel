@@ -7,19 +7,14 @@
 @stop
 
 @section('content')
-    <a href="/precios/create" class='btn btn-outline-success'>Crear</a>
-    @foreach ($precios as $precio)
-        <div class='d-flex flex-row justify-content-center align-items-center'>
-            <x-card
-            :titulo="$precio->titulo"
-            :dominio="$precio->dominio"
-            :hosting="$precio->dominio"
-            :almacenamiento="$precio->dominio"
-            :libre="$precio->libre"
-            :telefono="$precio->telefono"
-            :precio="$precio->precio" />
-        </div>
-    @endforeach
+    <a href="/precios/create" class='btn btn-outline-success mb-5'>Crear</a>
+    <div class="row container m-auto">
+        <x-card :precios="$precios" />
+    </div>
+
+
+
+    @include('sweetalert::alert')
 
 @stop
 
@@ -28,5 +23,7 @@
 @stop
 
 @section('js')
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 @stop

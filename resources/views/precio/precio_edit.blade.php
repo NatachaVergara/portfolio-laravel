@@ -7,7 +7,9 @@
 @stop
 
 @section('content')
-    <p>EDITAR</p>
+    <x-forms.edit_precios :precio="$precio" />
+
+    @include('sweetalert::alert')
 @stop
 
 @section('css')

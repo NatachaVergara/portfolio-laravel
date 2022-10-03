@@ -52,5 +52,5 @@
 
 
 @section('js')
-   
+
 @stop
