@@ -9,33 +9,11 @@
 @section('content')
     <div class="container">
         <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-            <div class="m-2">
-                <a href="#" class='btn'>
-                    <div class="card bg-dark" style="width: 10rem;">
-                        <div class="card-body d-flex justify-content-center align-items-center m-auto">
-                            <i class="fas fa-briefcase" style="font-size: 2rem;"></i>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="m-2">
-                <a href="#" class='btn'>
-                    <div class="card bg-danger" style="width: 10rem;">
-                        <div class="card-body d-flex justify-content-center align-items-center m-auto">
-                            <i class="fas fa-tools" style="font-size: 2rem;"></i>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="m-2">
-                <a href="#" class='btn'>
-                    <div class="card bg-info" style="width: 10rem;">
-                        <div class="card-body d-flex justify-content-center align-items-center m-auto">
-                            <i class="fas fa-dollar-sign" style="font-size: 2rem;"></i>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            <x-card.inicio_card color="bg-dark" icon='fas fa-briefcase' link="/proyectos" />
+            <x-card.inicio_card color="bg-danger" icon='fas fa-tools' link="/skills" />
+            <x-card.inicio_card color="bg-info" icon='fas fa-dollar-sign' link="/precios" />
+
+
 
         </div>
     </div>
