@@ -34,7 +34,6 @@
                     </div>
                 </x-slot>
             </x-adminlte-input-file>
-           
         </div>
 
         <div class=''>
