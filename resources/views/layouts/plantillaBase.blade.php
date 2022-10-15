@@ -7,13 +7,18 @@
     <title>Crud</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="{{asset('css\app.css')}}"  rel="stylesheet"/>
     @yield('css')
 </head>
 
 <body>
-    <h1 class='bg-info d-flex justify-content-center align-items-center py-2'>CRUD</h1>
+   
+    <header  id="header">
+       
+        
+    </header>
     <div class="container">
-        @yield('contenido')
+        @yield('header')
     </div>
 
 
