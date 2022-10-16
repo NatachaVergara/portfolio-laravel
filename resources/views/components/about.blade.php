@@ -1,6 +1,6 @@
    <!-- ======= About Section ======= -->
-   <section id="about" class="about">
-       <div class="container d-flex flex-column justify-content-center align-items-center">
+   <section id="about" class="about"  data-aos="fade-up">
+       <div class="container">
            <div class="section-title">
                <h2>Sobre mi</h2>
                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint

@@ -6,11 +6,11 @@
         <div class="card-body">
             <h2 class='card-title'>
                 <small class='text-muted fw-light fs-6'>Desde</small>
-                ${{ $precio->precio }} mill
+                ${{ $precio->precio }} mil
             </h2>
-            <p class="card-text">{{ $precio->dominio === 1 ? 'Si' : 'No' }}</p>
-            <p class="card-text">{{ $precio->hosting === 1 ? 'Si' : 'No' }}</p>
-            <p class="card-text">{{ $precio->almacenamiento }}</p>
+            <p class="card-text">dominio {{ $precio->dominio === 1 ? 'Si' : 'No' }}</p>
+            <p class="card-text">Hosting {{ $precio->hosting === 1 ? 'Si' : 'No' }}</p>
+            <p class="card-text">Almacenamiento {{ $precio->almacenamiento }}</p>
             <p class="card-text">{{ $precio->telefono }}</p>
 
             <form method="post" action="{{ route('precios.destroy', $precio->id) }}" class='enviarFormulario'>

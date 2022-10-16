@@ -13,7 +13,7 @@
                  <a href="#" class="instagram">
                      <iconify-icon icon="ant-design:instagram-outlined"></iconify-icon>
                  </a>
-                 <a href="#" class="linkedin">
+                 <a href="https://www.linkedin.com/in/natacha-vergara/" target="_blank" class="linkedin">
                      <iconify-icon icon="uit:linkedin-alt"></iconify-icon>
                  </a>
              </div>
@@ -39,7 +39,7 @@
                  <li><a href="#portfolio">
                          <iconify-icon icon="bx:book-content"></iconify-icon> Portfolio
                      </a></li>
-                 <li><a href="#services">
+                 <li><a href="#servicios">
                          <iconify-icon icon="bx:server"></iconify-icon> Servicios
                      </a></li>
                  <li><a href="#contact">

@@ -1,5 +1,5 @@
  <!-- ======= Resume Section ======= -->
- <section id="resume" class="resume">
+ <section id="resume" class="resume" data-aos="zoom-in">
      <div class="container">
 
          <div class="section-title">

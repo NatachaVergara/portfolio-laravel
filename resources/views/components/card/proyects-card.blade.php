@@ -1,6 +1,6 @@
 @foreach ($proyectos as $proyecto)
     {{-- comienzo card --}}
-    <div class="card m-2 rounded shadow-lg" style="width: 20rem; height: 30rem">
+    <div class="card m-2 rounded shadow-lg col-md-5 my-5" style="width: 18rem; height: 30rem">
         <img src="{{ asset('upload/proyectos/' . $proyecto->image) }}" class="card-img-top mw-50 mh-50 img-fluid"
             alt="imagen">
         <div class="card-body d-flex flex-column">

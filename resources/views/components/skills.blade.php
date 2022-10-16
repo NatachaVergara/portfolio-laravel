@@ -1,4 +1,4 @@
-<section id="skills" class="skills section-bg">
+<section id="skills" class="skills section-bg" data-aos="fade-right">
     <div class="container">
 
         <div class="section-title">

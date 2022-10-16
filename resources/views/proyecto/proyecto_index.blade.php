@@ -9,9 +9,12 @@
 @section('content')
     <a href='/proyectos/create' class='btn btn-outline-success my-3'>CREAR</a>
 
-    <div class="d-flex justify-content-center align-items-center">
-        <x-card.proyects-card :proyectos="$proyectos" />
-    </div>
+    <section class="container ">
+        <div class="d-flex justify-content-center align-items-center row ">
+            <x-card.proyects-card :proyectos="$proyectos" />
+        </div>
+    </section>
+    
 
 
     @include('sweetalert::alert')

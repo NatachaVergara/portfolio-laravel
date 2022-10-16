@@ -13,12 +13,10 @@
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <link href="{{ asset('assets/vendor/icofont/icofont.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/vendor/venobox/venobox.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet" />
+    
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />
     @yield('css')
     <title>NV Portfolio</title>
@@ -34,6 +32,7 @@
         <x-skills />
         <x-resume />
         <x-portfolio :proyectos="$proyectos" />
+        <x-servicios :precios="$precios" />
 
 
     </main>
@@ -45,18 +44,17 @@
     </script>
     <!-- CDN -->
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <!-- Vendor JS Files -->
-    <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
-    <script src="{{ asset('assets/vendor/waypoints/jquery.waypoints.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/counterup/counterup.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/venobox/venobox.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
+    
     <script src="{{ asset('assets/vendor/typed/typed.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
+
+
+
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
     @yield('js')

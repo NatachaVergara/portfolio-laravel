@@ -8,19 +8,19 @@
                  fugiat sit in iste officiis commodi quidem hic quas.</p>
          </div>
 
-
-         @foreach ($proyectos as $proyecto)
-             <div class="row portfolio-container">
-                 <div class="col-lg-4 col-md-6 portfolio-item ">
+         <div class="row portfolio-container">
+             @foreach ($proyectos as $proyecto)
+                 <div class="col-lg-4 col-md-6 portfolio-item" data-aos="zoom-out-right">
                      <div class="portfolio-wrap">
                          <img src="{{ asset('upload/proyectos/' . $proyecto->image) }}" class="img-fluid" alt="">
                          <div class="portfolio-links">
-                             <a href="{{ $proyecto->link }}" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+                             <a href="{{ $proyecto->link }}" target="_blank" title="More Details"><i
+                                     class="bx bx-link"></i></a>
                          </div>
                      </div>
                  </div>
-             </div>
-         @endforeach
+             @endforeach
+         </div>
      </div>
 
  </section><!-- End Portfolio Section -->
