@@ -1,3 +1,3 @@
-<div>
-    <!-- Do what you can, with what you have, where you are. - Theodore Roosevelt -->
-</div>
+<a href="#" class="back-to-top">
+    <box-icon name='arrow-to-top'></box-icon>
+</a>

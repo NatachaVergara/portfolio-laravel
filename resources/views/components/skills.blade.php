@@ -15,10 +15,6 @@
                         style="width: 2rem;" alt="{{ $skill->path }}">
                 </div>
             @endforeach
-
-
-
-
         </div>
 
     </div>
