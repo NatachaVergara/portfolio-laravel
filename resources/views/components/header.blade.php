@@ -21,7 +21,7 @@
 
          <nav class="nav-menu">
              <ul>
-                 <li class="active">
+                 <li>
                      <a href="#">
                          <iconify-icon icon="ant-design:home-outlined"></iconify-icon><span>Home</span>
                      </a>

@@ -11,9 +11,13 @@ class Skills extends Component
      *
      * @return void
      */
-    public function __construct()
+
+    public $skills;
+     
+    public function __construct($skills)
     {
         //
+        $this->skills = $skills;
     }
 
     /**

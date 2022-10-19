@@ -326,9 +326,9 @@ return [
             'url'         => 'precios',
             'icon'        => 'fas fa-dollar-sign',
         ],
-        ['header' => 'Configuracion de cuenta'],
+        ['header' => 'AJUSTES DE LA CUENTA'],
         [
-            'text' => 'Perfil de usuario',
+            'text' => 'Perfil',
             'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
         ],

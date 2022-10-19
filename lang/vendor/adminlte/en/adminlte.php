@@ -27,3 +27,4 @@ return [
     'confirm_password_message'    => 'Please, confirm your password to continue.',
     'remember_me_hint'            => 'Keep me authenticated indefinitely or until I manually logout',
 ];
+

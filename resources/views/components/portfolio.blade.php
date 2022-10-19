@@ -1,5 +1,5 @@
  <!-- ======= Portfolio Section ======= -->
- <section id="portfolio" class="portfolio section-bg">
+ <section id="portfolio" class="portfolio section-bg mb-5">
      <div class="container">
          <div class="section-title">
              <h2>Portfolio</h2>
@@ -10,12 +10,11 @@
 
          <div class="row portfolio-container">
              @foreach ($proyectos as $proyecto)
-                 <div class="col-lg-4 col-md-6 portfolio-item" data-aos="zoom-out-right">
+                 <div class="col-lg-4 col-md-6 portfolio-item" data-aos="flip-right">
                      <div class="portfolio-wrap">
                          <img src="{{ asset('upload/proyectos/' . $proyecto->image) }}" class="img-fluid" alt="">
                          <div class="portfolio-links">
-                             <a href="{{ $proyecto->link }}" target="_blank" title="More Details"><i
-                                     class="bx bx-link"></i></a>
+                          <a href="{{ $proyecto->link }}" target="_blank" title="More Details"><box-icon name='link-external'></box-icon></a>                             
                          </div>
                      </div>
                  </div>
